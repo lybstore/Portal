@@ -1,4 +1,4 @@
 # portal
 Single page application - Angular JS
 
-Description coming soon 
+This is a single page web app
