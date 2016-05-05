@@ -13,6 +13,23 @@
                   "statement-period": "30-sept-2014-30-sept-2015",
                   "annuity-type": "Flexible",
                   "currency": "BSD"
+                },
+                "Statement": {
+                  "Beginning Balance": "$2,785.99",
+                  "Premiums": "$1,650",
+                  "Interest": "$121.52",
+                  "Partial Surrenders": "$0.00",
+                  "Adjustments": "$0.00",
+                  "Penalty Fees": "$0.00",
+                  "Ending Balance": "$4,548.70"
+                },
+                "Inception": {
+                  "Premiums": "$4,350",
+                  "Interest": "$198.70",
+                  "Partial Surrenders": "$0.00",
+                  "Adjustments": "$0.00",
+                  "Penalty Fees": "$0.00",
+                  "Accumulated Value": "$4,548.70"
                 }
               },
               {
