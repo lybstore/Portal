@@ -44,14 +44,14 @@
 <!-- CONTRACT SERVICES -->
 <div class="portal-container" ng-controller="contractCtrl">
     <div class="policy-block">
-      <ul class="policy overview">
-        <li>Contact Number: <span>{{contract-widget.contract-number}}</span></li>
-        <li>Annuity Type: <span>{{contract-widget.annuity-type}}</span></li>
-        <li>Start: <span>{{contract-widget.issue-date}}</span></li>
-        <li>End Date: <span>{{contract-widget.end-date}}</span></li>
-        <li>Status: <span>{{contract-widget.status}}</span></li>
-        <li>Accumulated Value: <span></span></li>
-        <li>Cash Surrender Value: <span>{{surrenderValue}}</span></li>
+      <ul class="policy overview" ng-repeat="user in contract | filter:query | limitTo: 1">
+        <li>Contact Number: <span>{{user.contract-widget.contract-number}}</span></li>
+        <li>Annuity Type: <span>{{user.contract-widget.annuity-type}}</span></li>
+        <li>Start: <span>{{user.contract-widget.issue-date}}</span></li>
+        <li>End Date: <span>{{user.contract-widget.end-date}}</span></li>
+        <li>Status: <span>{{user.contract-widget.status}}</span></li>
+        <li>Accumulated Value: <span>{{user.contract-widget.Accumulated-value}}</span></li>
+        <li>Cash Surrender Value: <span>{{user.contract-widget.cash-surrender-value}}</span></li>
       </ul>
       <a href="/policy.html" class="view-policy-btn">
         <span>View Contract Statement</span>
