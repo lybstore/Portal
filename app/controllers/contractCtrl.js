@@ -21,9 +21,4 @@ angular
   promise.then(function (data){
       $scope.contract = data.contract;
   });
-
-  // USERS OBJECTS
-
-  
-
-}])
+}]);
