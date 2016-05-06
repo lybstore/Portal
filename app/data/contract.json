@@ -1,19 +1,20 @@
 {
 
-  "name": "user",
+  "name": "contract",
   "version": ".1",
-  "users": [
+  "contracts": [
               {
                 "user": "Loren",
                 "password": "Lwebster123",
-                "contract": {
+                "contract-widget": {
                   "contract-number": "116-1310",
-                   "annuity-type": "Flexible",
+                  "annuity-type": "Flexible",
                   "issue-date": "13-may-2013",
+                  "end-date": "13-may-2012",
                   "status": "Active",
-                  "accumulated-value": "$4,548.70",
-                  "cash-surrender-value": "$4,494.11",
-                },
+                  "Accumulated-value": "$4,548.70",
+                  "cash-surrender-value": "$4,494.11"
+                }
               },
               {
                 "user": "Agatha",
