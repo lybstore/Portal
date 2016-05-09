@@ -1,19 +1,17 @@
 {
 
-  "name": "user",
+  "name": "users",
   "version": ".1",
   "users": [
               {
                 "user": "Loren",
                 "password": "Lwebster123",
-                "contract": {
-                  "contract-number": "116-1310",
-                   "annuity-type": "Flexible",
-                  "issue-date": "13-may-2013",
-                  "status": "Active",
-                  "accumulated-value": "$4,548.70",
-                  "cash-surrender-value": "$4,494.11",
-                },
+                "login": {
+                  "name": "Loren Webster",
+                  "address": "Seawell Manor, Off Gladstone Road, P.O. Box N-9265 Nassau, Bahamas",
+                  "email": "lorenwebster@baf.com",
+                  "telephone": "242-461-1000"
+                }
               },
               {
                 "user": "Agatha",

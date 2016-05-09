@@ -41,38 +41,72 @@
   <!-- /left-sidebar -->
 </div>
 <div class="portal-container">
-  <div class="portal-body">
-    <div class="client-details">
+
+  <!-- HEADERS STARTS HERE -->
+  <header>
+    <a href="#" id="logo">
+      <img src="app/images/logo.png" alt="BAF Financial &amp; Insurance">
+      <span>BAF Financial &amp; Insurance</span>
+    </a>
+    <div class="header-right" ng-repeat="user in users | filter: query | limitTo: 1">
+      <div class="date">
+        <span id="dtText"></span>
+      </div>
+      <div class="profile">
+        <span>Hello, {{users.user}}</span>
+        <div class="profile-pic">
+          <i class="fa fa-user"></i>
+        </div>
+        <!-- /profile -->
+      </div>
+      <!-- /header-right -->
+    </div>
+  </header>
+  <!-- HEADERS ENDS HEE -->
+
+<!-- CLIENT DETAILS -->
+<div class="portal-body">
+  <div ng-controller="userCtrl">
+    <div class="client-details" ng-repeat="user in login.users | filter:query | limitTo: 1">
       <h2>Your Details</h2>
       <p>
-        <strong>Name:</strong> Loren Webster
+        <strong>Name:</strong>{{user.login.name}}
         <br>
-        <strong>Address:</strong> Seawell Manor, Off Gladstone Road, P.O. Box N-9265 Nassau, Bahamas
+        <strong>Address:</strong>{{user.login.address}}
         <br>
-        <strong>Email:</strong> <a href="mailto:lorenwebster@baf.com ">lorenwebster@baf.com </a>
+        <strong>Email:</strong> <a href="mailto:lorenwebster@baf.com ">{{user.login.email}}</a>
         <br>
-        <strong>Telephone:</strong> 242-461-1000
+        <strong>Telephone:</strong>{{user.login.telephone}}
       </p>
-      <!-- /client-details -->
-    </div>
+  </div>
+</div>
+  <!-- /client-details ends here -->
+
+<div class="client-policies">
+  <h2>Your Contracts</h2>
+  <p>
+    <strong>Disclaimer: Please note, the fund value shown is computed without a complete review of any withdrawals made. The actual fund value may change after such a review is made. </strong>
+  </p>
+</div>
 
 <!-- CONTRACT SERVICES -->
 <div class="portal-container" ng-controller="contractCtrl">
     <div class="policy-block">
       <ul class="policy overview" ng-repeat="user in contract | filter:query | limitTo: 1">
-        <li>Contact Number: <span>{{user.contract-widget.contract-number}}</span></li>
-        <li>Annuity Type: <span>{{user.contract-widget.annuity-type}}</span></li>
-        <li>Start: <span>{{user.contract-widget.issue-date}}</span></li>
-        <li>End Date: <span>{{user.contract-widget.end-date}}</span></li>
-        <li>Status: <span>{{user.contract-widget.status}}</span></li>
-        <li>Accumulated Value: <span>{{user.contract-widget.Accumulated-value}}</span></li>
-        <li>Cash Surrender Value: <span>{{user.contract-widget.cash-surrender-value}}</span></li>
+        <li>Contact Number: <span>{{user['contract-widget']['contract-number']}}</span></li>
+        <li>Annuity Type: <span>{{user['contract-widget']['annuity-type']}}</span></li>
+        <li>Start: <span>{{user['contract-widget']['issue-date']}}</span></li>
+        <li>End Date: <span>{{user['contract-widget']['end-date']}}</span></li>
+        <li>Status: <span>{{user['contract-widget']['status']}}</span></li>
+        <li>Accumulated Value: <span>{{user['contract-widget']['Accumulated-value']}}</span></li>
+        <li>Cash Surrender Value: <span>{{user['contract-widget']['cash-surrender-value']}}</span></li>
       </ul>
-      <a href="/policy.html" class="view-policy-btn">
+      <a href="#/policy.html" class="view-policy-btn">
         <span>View Contract Statement</span>
       </a>
     </div>
 </div>
 <!-- CONTRACT SERVICE ENDS HERE -->
+
 </div> <!-- PORTAL BODY ENDS HERE -->
 </div> <!-- portal-container ends here -->
