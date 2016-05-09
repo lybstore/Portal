@@ -13,7 +13,24 @@
                   "end-date": "13-may-2012",
                   "status": "Active",
                   "Accumulated-value": "$4,548.70",
-                  "cash-surrender-value": "$4,494.11"
+                  "cash-surrender-value": "$4,494.11",
+                  "statement-period": "30-Sep-2014 - 30-Sep-2015",
+                  "currency": "BSD",
+                  "beginning-balance": "$2,785.99",
+                  "premiums": "$1,650",
+                  "interest": "$121.52",
+                  "partial-surrenders": "$0.00",
+                  "adjustments": "$0.00",
+                  "penalty-fees": "$0.00",
+                  "ending-balance": "$4,548.70"
+                },
+                "inception": {
+                  "premiums": "$4,350",
+                  "interest": "$198.70",
+                  "partial-surrenders": "$0.00",
+                  "adjustments": "$0.00",
+                  "penalty-fees": "$0.00",
+                  "accumulated-value": "$4,548.70"
                 }
               },
               {

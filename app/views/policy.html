@@ -1,11 +1,77 @@
 <div class="portal-body">
-  <div class="policy-block">
-    <ul class="policy">
-      <li>Annuity Contract Number:<span>{{}}</span></li>
-      <li>Issue Date:<span>{{}}</span></li>
-      <li>Statement Period:<span>{{}}</span></li>
-      <li>Annuity Type:<span>{{}}</span></li>
-      <li>Currency:<span>{{}}</span></li>
+  <div class="policy-block" ng-controller="contractCtrl">
+    <ul class="policy" ng-repeat="user in contract | filter:query | limitTo: 1">
+      <li>Annuity Contract Number:<span>{{user['contract-widget']['contract-number']}}</span></li>
+      <li>Issue Date:<span>{{user['contract-widget']['issue-date']}}</span></li>
+      <li>Statement Period:<span>{{user['contract-widget']['statement-period']}}</span></li>
+      <li>Annuity Type:<span>{{user['contract-widget']['annuity-type']}}</span></li>
+      <li>Currency:<span>{{user['contract-widget']['currency']}}</span></li>
     </ul>
   </div>
+
+<div class="chart-container">
+ <h4>
+   Accumulated policy value
+   <span>Over 12 months</span>
+ </h4>
+ <div class="chart"></div>
 </div>
+<div class="row">
+  <div class="col-2">
+    <div class="policy-block summary" ng-controller="contractCtrl">
+      <h4>Statement Period Summary</h4>
+      <div class="policy" ng-repeat="user in contract | filter:query | limitTo: 1">
+        <ul>
+          <li>Beginning Balance: <span> {{user['contract-widget']['beginning-balance']}}</span></li>
+          <li>Premiums: <span> {{user['contract-widget']['premiums']}}</span></li>
+          <li>Interest: <span> {{user['contract-widget']['interest']}}</span></li>
+          <li>Partial Surrenders: <span> {{user['contract-widget']['partial-surrenders']}}</span></li>
+          <li>Adjustments: <span> {{user['contract-widget']['adjustments']}}</span></li>
+          <li>Penalty Fees: <span> {{user['contract-widget']['penalty-fees']}}</span></li>
+          <li>Ending Balance: <span> {{user['contract-widget']['ending-balance']}}</span></li>
+        </ul>
+        <!-- /policy -->
+      </div>
+      <!-- /policy-block summary -->
+    </div>
+    <!-- /col-2 -->
+  </div>
+
+  <div class="col-2">
+    <div class="policy-block summary" ng-controller="contractCtrl">
+      <h4>Since Inception Summary</h4>
+      <div class="policy" ng-repeat="user in contract | filter:query | limitTo: 1">
+        <ul>
+          <li>Premiums: <span>{{user['inception']['premiums']}}</span></li>
+          <li>Interest: <span>{{user['inception']['interest']}}</span></li>
+          <li>Partial Surrenders: <span>{{user['inception']['partial-surrenders']}}</span></li>
+          <li>Adjustments: <span>{{user['inception']['adjustments']}}</span></li>
+          <li>Penalty Fees: <span>{{user['inception']['penalty-fees']}}</span></li>
+          <li>Accumulated Value: <span>{{user['inception']['accumulated-value']}}</span></li>
+        </ul>
+        <!-- /policy -->
+      </div>
+      <!-- /policy-block summary -->
+    </div>
+    <!-- /col-2 -->
+  </div>
+  <!-- /row -->
+</div>
+
+<div class="statements">
+  <ul>
+    <li><a href="#monthly-statements">Monthly Statements</a></li>
+    <li><a href="#day-statements">Day to Day Statements</a></li>
+  </ul>
+  <div id="day-statements" ng-controller="dayCtrl">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+</div> <!--- / STATEMENTS ENDS HERE -->
+
+</div> <!-- PORTAL BODY ENDS HERE -->
