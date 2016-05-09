@@ -15,5 +15,9 @@ angular
 							url: '/profile',
 							templateUrl: 'app/views/profile.html'
 							//controller: 'profileCtrl'
+						})
+						.state('policy', {
+							url: '/policy',
+							templateUrl: 'app/views/policy.html'
 						});
 	        }])

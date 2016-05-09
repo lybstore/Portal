@@ -67,7 +67,7 @@
 <!-- CLIENT DETAILS -->
 <div class="portal-body">
   <div ng-controller="userCtrl">
-    <div class="client-details" ng-repeat="user in login | filter:query | limitTo: 1">
+    <div class="client-details" ng-repeat="user in login.users | filter:query | limitTo: 1">
       <h2>Your Details</h2>
       <p>
         <strong>Name:</strong>{{user.login.name}}
@@ -101,7 +101,7 @@
         <li>Accumulated Value: <span>{{user['contract-widget']['Accumulated-value']}}</span></li>
         <li>Cash Surrender Value: <span>{{user['contract-widget']['cash-surrender-value']}}</span></li>
       </ul>
-      <a href="/policy.html" class="view-policy-btn">
+      <a href="#/policy.html" class="view-policy-btn">
         <span>View Contract Statement</span>
       </a>
     </div>
