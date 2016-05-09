@@ -1,0 +1,78 @@
+{
+
+  "name": "days",
+  "version": ".1",
+  "days": [
+              {
+                "user": "Loren",
+                "password": "Lwebster123",
+                "orginal-balance": {
+                  "30-sept-15": "4,537.13",
+                  "29-sept-15": "4,387.13",
+                  "31-aug-15": "4,375.59",
+                  "28-aug-15": "4,375.59",
+                  "31-jul-15": "4,214,51",
+                  "30-jul-15": "3,914.51",
+                  "31-may-15": "3,744.27",
+                  "05-may-15": "3,594.27"
+                },
+                "effective-date": {
+                  "30-sept-15": "30-Sept-2015",
+                  "29-sept-15": "29-Sept-2015",
+                  "31-aug-15": "31-Aug-15",
+                  "28-aug-15": "28-Aug-15",
+                  "31-jul-15": "31-Jul-15",
+                  "30-jul-15": "30-Jul-15",
+                  "31-may-15": "31-May-15",
+                  "05-may-15": "05-May-15"
+                },
+                "amount": {
+                  "30-sept-15": "11.56",
+                  "29-sept-15": "150.00",
+                  "31-aug-15": "11.53",
+                  "28-aug-15": "150.00",
+                  "31-jul-15": "11.08",
+                  "30-jul-15": "150.00",
+                  "31-may-15": "10.12",
+                  "05-may-15": "100.00"
+                },
+                "action": {
+                  "30-sept-15": "Monthly Bonus Allocation",
+                  "29-sept-15": "Unit Allocation",
+                  "31-aug-15": "Monthly Bonus Allocation",
+                  "28-aug-15": "Unit Allocation",
+                  "31-jul-15": "Monthly Bonus Allocation",
+                  "30-jul-15": "Unit Allocation",
+                  "31-may-15": "Monthly Bonus Allocation",
+                  "05-may-15": "Unit Allocation"
+                },
+                "new balance": {
+                  "30-sept-15": "4,548.69",
+                  "29-sept-15": "4,537.13",
+                  "31-aug-15": "4,387.13",
+                  "28-aug-15": "4,375.59",
+                  "31-jul-15": "4,225.59",
+                  "30-jul-15": "4,064.51",
+                  "31-may-15": "3,754.39",
+                  "05-may-15": "3,744.27"
+                }
+              },
+              {
+                "user": "Agatha",
+                "password": "password1"
+              },
+              {
+                "user": "Joyce",
+                "password": "password2"
+              },
+              {
+                "user": "Nikechia",
+                "password": "password3"
+              },
+              {
+                "user": "Isacc",
+                "password": "password3"
+              }
+           ]
+
+}
