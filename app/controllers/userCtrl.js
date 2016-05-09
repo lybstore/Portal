@@ -19,6 +19,6 @@ angular
 
   var promise = userService.getuser();
   promise.then(function (data){
-      $scope.user = data.user;
+      $scope.users = data.users;
   });
 }])
