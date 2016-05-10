@@ -198,6 +198,98 @@
         </tbody>
       </table>
     </div>
+
+    <!--- MONTHLY STATEMENT SECTION -->
+
+    <div id="monthly-statements" ng-controller="monthCtrl">
+      <table>
+        <thead>
+          <tr>
+              <th>Month Ending</th>
+              <th>Original Balance</th>
+              <th>Premium Credited</th>
+              <th>Interest Credited</th>
+              <th>Current Rate</th>
+              <th>Accumulated Value</th>
+          </tr>
+        </thead>
+        <tbody ng-repeat="user in months | filter:query | limitTo: 1">
+          <tr>
+            <td>{{user['ending']['30-sept-15']}}</td>
+            <td>{{user['orginal-balance']['30-sept-15']}}</td>
+            <td>{{user['premium-credited']['30-sept-15']}}</td>
+            <td>{{user['interest-credited']['30-sept-15']}}</td>
+            <td>{{user['current-rate']['30-sept-15']}}</td>
+            <td>{{user['accummulated-value']['30-sept-15']}}</td>
+          </tr>
+          <tr>
+            <td>{{user['ending']['31-aug-15']}}</td>
+            <td>{{user['orginal-balance']['31-aug-15']}}</td>
+            <td>{{user['premium-credited']['31-aug-15']}}</td>
+            <td>{{user['interest-credited']['31-aug-15']}}</td>
+            <td>{{user['current-rate']['31-aug-15']}}</td>
+            <td>{{user['accummulated-value']['31-aug-15']}}</td>
+          </tr>
+          <tr>
+            <td>{{user['ending']['31-jul-15']}}</td>
+            <td>{{user['orginal-balance']['31-jul-15']}}</td>
+            <td>{{user['premium-credited']['31-jul-15']}}</td>
+            <td>{{user['interest-credited']['31-jul-15']}}</td>
+            <td>{{user['current-rate']['31-jul-15']}}</td>
+            <td>{{user['accummulated-value']['31-jul-15']}}</td>
+          </tr>
+          <tr>
+            <td>{{user['ending']['30-jun-15']}}</td>
+            <td>{{user['orginal-balance']['30-jun-15']}}</td>
+            <td>{{user['premium-credited']['30-jun-15']}}</td>
+            <td>{{user['interest-credited']['30-jun-15']}}</td>
+            <td>{{user['current-rate']['30-jun-15']}}</td>
+            <td>{{user['accummulated-value']['30-jun-15']}}</td>
+          </tr>
+          <tr>
+            <td>{{user['ending']['31-may-15']}}</td>
+            <td>{{user['orginal-balance']['31-may-15']}}</td>
+            <td>{{user['premium-credited']['31-may-15']}}</td>
+            <td>{{user['interest-credited']['31-may-15']}}</td>
+            <td>{{user['current-rate']['31-may-15']}}</td>
+            <td>{{user['accummulated-value']['31-may-15']}}</td>
+          </tr>
+          <tr>
+            <td>{{user['ending']['30-apr-15']}}</td>
+            <td>{{user['orginal-balance']['30-apr-15']}}</td>
+            <td>{{user['premium-credited']['30-apr-15']}}</td>
+            <td>{{user['interest-credited']['30-apr-15']}}</td>
+            <td>{{user['current-rate']['30-apr-15']}}</td>
+            <td>{{user['accummulated-value']['30-apr-15']}}</td>
+          </tr>
+          <tr>
+            <td>{{user['ending']['31-mar-15']}}</td>
+            <td>{{user['orginal-balance']['31-mar-15']}}</td>
+            <td>{{user['premium-credited']['31-mar-15']}}</td>
+            <td>{{user['interest-credited']['31-mar-15']}}</td>
+            <td>{{user['current-rate']['31-mar-15']}}</td>
+            <td>{{user['accummulated-value']['31-mar-15']}}</td>
+          </tr>
+          <tr>
+            <td>{{user['ending']['28-feb-15']}}</td>
+            <td>{{user['orginal-balance']['28-feb-15']}}</td>
+            <td>{{user['premium-credited']['28-feb-15']}}</td>
+            <td>{{user['interest-credited']['28-feb-15']}}</td>
+            <td>{{user['current-rate']['28-feb-15']}}</td>
+            <td>{{user['accummulated-value']['28-feb-15']}}</td>
+          </tr>
+          <tr>
+            <td>{{user['ending']['31-jan-15']}}</td>
+            <td>{{user['orginal-balance']['31-jan-15']}}</td>
+            <td>{{user['premium-credited']['31-jan-15']}}</td>
+            <td>{{user['interest-credited']['31-jan-15']}}</td>
+            <td>{{user['current-rate']['31-jan-15']}}</td>
+            <td>{{user['accummulated-value']['31-jan-15']}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
   </div> <!--- / STATEMENTS ENDS HERE -->
 
   </div> <!-- PORTAL BODY ENDS HERE -->
