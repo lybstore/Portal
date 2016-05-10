@@ -35,31 +35,7 @@
 		<script src="app/controllers/contractCtrl.js"></script>
 		<script src="app/controllers/dayCtrl.js"></script>
 		<script src="app/controllers/monthCtrl.js"></script>
-		<script>
-		$(document).ready(function(){
-			$('.summary').matchHeight();
-			$('.statements').responsiveTabs({
-				startCollapsed: 'accordion'
-			});
-			$.ReStable({
-				rowHeaders: false,
-				maxWidth: 1024,
-				keepHtml: false
-			});
-			$(".sortable").DataTable({
-				"order": [[0, "desc"]]
-			});
-			if ($('.portal-body').children('.policy-block').length > 1) {
-				$(".policy-block").addClass("multiple");
-			}
-			$("a#logout").on('click', function(){
-				alert("You're about to log out!");
-				window.location = "login.htm";
-			});
-		});
-		</script>
-		<!--<script src="app/directives/nav-directive.js"></script>
-		<script src="app/directives/policy-directive.js"></script>-->
+		<script src="app/controllers/policyCtrl.js"></script>
 	</section>
 </body>
 </html>

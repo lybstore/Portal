@@ -18,7 +18,7 @@ angular
 						})
 						.state('policy', {
 							url: '/policy',
-							templateUrl: 'app/views/policy.html'
-							//controller: 'policyCtrl'
+							templateUrl: 'app/views/policy.html',
+							controller: 'policyCtrl'
 						});
 	        }])

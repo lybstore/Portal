@@ -17,7 +17,7 @@
      Accumulated policy value
      <span>Over 12 months</span>
    </h4>
-   <div class="chart"></div>
+   <div class="chart" ng-model="chart"></div>
   </div>
   <div class="row">
     <div class="col-2">
@@ -39,6 +39,7 @@
       </div>
       <!-- /col-2 -->
     </div>
+
     <div class="col-2">
       <div class="policy-block summary" ng-controller="contractCtrl">
         <h4>Since Inception Summary</h4>
@@ -59,10 +60,10 @@
     </div>
     <!-- /row -->
   </div>
-  <div class="statements r-tabs">
-    <ul class="r-tabs r-tabs-nav">
-      <li class="r-tabs-tab r-tabs-state-active"><a class="r-tabs-anchor" href="/#monthly-statements">Monthly Statements</a></li>
-      <li class="r-tabs-tab r-tabs-state-default"><a class="r-tabs-anchor" href="/#day-statements">Day to Day Statements</a></li>
+  <div class="statements">
+    <ul>
+      <li><a href="#monthly-statements">Monthly Statements</a></li>
+      <li><a href="#day-statements">Day to Day Statements</a></li>
     </ul>
     <div id="day-statements" ng-controller="dayCtrl">
       <table class="sortable">
