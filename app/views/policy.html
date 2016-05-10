@@ -59,13 +59,13 @@
     </div>
     <!-- /row -->
   </div>
-  <div class="statements">
-    <ul>
-      <li><a href="#monthly-statements">Monthly Statements</a></li>
-      <li><a href="#day-statements">Day to Day Statements</a></li>
+  <div class="statements r-tabs">
+    <ul class="r-tabs r-tabs-nav">
+      <li class="r-tabs-tab r-tabs-state-active"><a class="r-tabs-anchor" href="/#monthly-statements">Monthly Statements</a></li>
+      <li class="r-tabs-tab r-tabs-state-default"><a class="r-tabs-anchor" href="/#day-statements">Day to Day Statements</a></li>
     </ul>
     <div id="day-statements" ng-controller="dayCtrl">
-      <table>
+      <table class="sortable">
         <thead>
           <tr>
             <th>Original Balance</th>
@@ -202,7 +202,7 @@
     <!--- MONTHLY STATEMENT SECTION -->
 
     <div id="monthly-statements" ng-controller="monthCtrl">
-      <table>
+      <table class="sortable">
         <thead>
           <tr>
               <th>Month Ending</th>
