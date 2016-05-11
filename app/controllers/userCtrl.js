@@ -25,7 +25,7 @@ angular
   $scope.myDate = new Date();
   $scope.convertToDate = function (stringDate) {
     var dateOut = new Date(stringDate);
-    dateOut.setDate(dateOut.getDate());
+    //dateOut.setDate(dateOut.getDate());
     return dateOut;
   };
 
