@@ -14,11 +14,15 @@ angular
 						.state('profile' , {
 							url: '/profile',
 							templateUrl: 'app/views/profile.html'
-							//controller: 'profileCtrl'
+
 						})
 						.state('policy', {
 							url: '/policy',
 							templateUrl: 'app/views/policy.html',
 							controller: 'policyCtrl'
+						})
+						.state('request', {
+							url: '/request',
+							templateUrl: 'app/views/request.html'
 						});
 	        }])

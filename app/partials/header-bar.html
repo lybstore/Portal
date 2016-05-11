@@ -6,7 +6,7 @@
   </a>
   <div class="header-right" ng-repeat="user in users | filter: query | limitTo: 1">
     <div class="date">
-      <span id="dtText"></span>
+      <span ng-bind="convertToDate(myDate) | date: 'medium'" id="dtText"></span>
     </div>
     <div class="profile">
       <span>Hello, {{user.user}}</span>

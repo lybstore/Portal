@@ -4,7 +4,7 @@ angular
 .module('auApp')
 .controller('policyCtrl', ['$scope', function($scope) {
 
-  var chart = c3.generate({
+  /*var chart = c3.generate({
 		bindto: '.chart',
 		size: {
 			height:440
@@ -45,7 +45,7 @@ angular
 		}
 	});
 
-  $(document).ready(function(){
+  /*$(document).ready(function(){
     $('.summary').matchHeight();
     $('.statements').responsiveTabs({
       startCollapsed: 'accordion'
@@ -65,6 +65,6 @@ angular
       alert("You're about to log out!");
       window.location = "login.htm";
     });
-  });
+  });*/
 
 }])
