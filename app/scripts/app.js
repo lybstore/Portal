@@ -16,6 +16,10 @@ angular
 							templateUrl: 'app/views/profile.html'
 
 						})
+						.state('settings', {
+							url: '/settings',
+							templateUrl: 'app/views/settings.html'
+						})
 						.state('policy', {
 							url: '/policy',
 							templateUrl: 'app/views/policy.html',
