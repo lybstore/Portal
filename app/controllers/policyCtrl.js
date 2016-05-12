@@ -2,50 +2,53 @@
 
 angular
 .module('auApp')
-.controller('policyCtrl', ['$scope', function($scope) {
+.controller('policyCtrl', ['$scope', '$http', function($scope, $http) {
+  var chart;
+  $http.get('app/data/columnsData.json').then(function(result){
+    chart = c3.generate({
+  		bindto: '.chart',
+  		size: {
+  			height:440
+  		},
+  		data: {
+  			x: 'x',
+  			columns: [
+  			result.data.columns.firstColumn,
+  			result.data.columns.secondColumn
+  			],
+  			type: 'area-spline'
+  		},
+  		legend: {
+  			show:false
+  		},
+  		axis: {
+  			x: {
+  				type: 'categorized',
+  				tick: {
+  					rotate: 90,
+  					multiline: false
+  				},
+  				height: 70
+  			},
+  			y: {
+  				tick: {
+  					format: d3.format("$")
+  				}
+  			}
+  		},
+  		grid: {
+  			y: {
+  				show:true
+  			}
+  		},
+  		transition: {
+  			duration: 2000
+  		}
+  	});
+  })
 
-  var chart = c3.generate({
-		bindto: '.chart',
-		size: {
-			height:440
-		},
-		data: {
-			x: 'x',
-			columns: [
-			['x', 'SEP-2014', 'OCT-2014', 'NOV-2014', 'DEC-2014', 'JAN-2015', 'FEB-2015', 'MAR-2015', 'APR-2015', 'MAY-2015', 'JUN-2015', 'JUL-2015', 'AUG-2015', 'SEP-2015'],
-			['Ending Balance', 2042, 2199, 2355, 2361, 2518, 2524, 2531, 2537, 2544, 2551, 2558, 2565, 2572]
-			],
-			type: 'area-spline'
-		},
-		legend: {
-			show:false
-		},
-		axis: {
-			x: {
-				type: 'categorized',
-				tick: {
-					rotate: 90,
-					multiline: false
-				},
-				height: 70
-			},
-			y: {
-				tick: {
-					format: d3.format("$")
-				}
-			}
-		},
-		grid: {
-			y: {
-				show:true
-			}
-		},
-		transition: {
-			duration: 2000
-		}
-	});
 
-  $(document).ready(function(){
+  $(window).load(function(){
     $('.summary').matchHeight();
     $('.statements').responsiveTabs({
       startCollapsed: 'accordion'
