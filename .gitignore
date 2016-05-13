@@ -1,6 +1,1 @@
-.sass-cache
-.node_modules
-<<<<<<< HEAD
-=======
-.bower_components
->>>>>>> nav-directives
+node_modules/
