@@ -3,52 +3,51 @@
 angular
 .module('auApp')
 .controller('policyCtrl', ['$scope', '$http', function($scope, $http) {
-  var chart;
-  $http.get('app/data/columnsData.json').then(function(result){
+    var chart;
+    $http.get('app/data/columnsData.json').then(function(result){
     chart = c3.generate({
-  		bindto: '.chart',
-  		size: {
-  			height:440
-  		},
-  		data: {
-  			x: 'x',
-  			columns: [
-  			result.data.columns.firstColumn,
-  			result.data.columns.secondColumn
-  			],
-  			type: 'area-spline'
-  		},
-  		legend: {
-  			show:false
-  		},
-  		axis: {
-  			x: {
-  				type: 'categorized',
-  				tick: {
-  					rotate: 90,
-  					multiline: false
-  				},
-  				height: 70
-  			},
-  			y: {
-  				tick: {
-  					format: d3.format("$")
-  				}
-  			}
-  		},
-  		grid: {
-  			y: {
-  				show:true
-  			}
-  		},
-  		transition: {
-  			duration: 2000
-  		}
-  	});
-  })
+		bindto: '.chart',
+		size: {
+			height:440
+		},
+		data: {
+			x: 'x',
+      columns: [
+      result.data.columns.firstColumn,
+      result.data.columns.secondColumn
+    ],
+			type: 'area-spline'
+		},
+		legend: {
+			show:false
+		},
+		axis: {
+			x: {
+				type: 'categorized',
+				tick: {
+					rotate: 90,
+					multiline: false
+				},
+				height: 70
+			},
+			y: {
+				tick: {
+					format: d3.format("$")
+				}
+			}
+		},
+		grid: {
+			y: {
+				show:true
+			}
+		},
+		transition: {
+			duration: 2000
+		}
+	});
+})
 
-
-  $(window).load(function(){
+  $(document).ready(function(){
     $('.summary').matchHeight();
     $('.statements').responsiveTabs({
       startCollapsed: 'accordion'

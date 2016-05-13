@@ -69,14 +69,14 @@
       <table class="sortable">
         <thead>
           <tr>
-            <td>Original Balance</td>
-            <td>Effective Date</td>
-            <td>Amount</td>
-            <td>Action</td>
-            <td>New Balance</td>
+            <th>Original Balance</th>
+            <th>Effective Date</th>
+            <th>Amount</th>
+            <th>Action</th>
+            <th>New Balance</th>
           </tr>
         </thead>
-        <tbody ng-repeat="user in days | filter:query | limitTo: 1" ng-if="days.length > 0">
+        <tbody ng-repeat="user in days | filter:query | limitTo: 1">
             <tr>
               <td>{{user['orginal-balance']['30-sept-15']}}</td>
               <td>{{user['effective-date']['30-sept-15']}}</td>
