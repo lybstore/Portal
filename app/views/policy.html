@@ -2,7 +2,16 @@
 <div class="portal-container">
   <div ng-include="'/app/partials/header-bar.html'"></div>
   <div class="portal-body">
-    <div class="policy-block" ng-controller="contractCtrl">
+    <div ng-controller="contractCtrl">
+    <div class="client-policies">
+      <h2>Your Annuity Contract</h2>
+      <p ng-repeat="user in contract | filter:query | limitTo: 1">
+        This statement summarizes actual annuity activities for the reported year. Current interest rate and risk charges are not guaranteed for the future. Interest is credited monthly to the account. The current interest rate is <strong>{{user['contract-widget']['current-rate']}}.</strong>
+      </p>
+      <!-- /client-policies -->
+    </div>
+
+    <div class="policy-block">
       <ul class="policy" ng-repeat="user in contract | filter:query | limitTo: 1">
         <li>Annuity Contract Number:<span>{{user['contract-widget']['contract-number']}}</span></li>
         <li>Issue Date:<span>{{user['contract-widget']['issue-date']}}</span></li>
@@ -21,7 +30,7 @@
   </div>
   <div class="row">
     <div class="col-2">
-      <div class="policy-block summary" ng-controller="contractCtrl">
+      <div class="policy-block summary">
         <h4>Statement Period Summary</h4>
         <div class="policy" ng-repeat="user in contract | filter:query | limitTo: 1">
           <ul>
@@ -41,7 +50,7 @@
     </div>
 
     <div class="col-2">
-      <div class="policy-block summary" ng-controller="contractCtrl">
+      <div class="policy-block summary">
         <h4>Since Inception Summary</h4>
         <div class="policy" ng-repeat="user in contract | filter:query | limitTo: 1">
           <ul>
@@ -60,6 +69,7 @@
     </div>
     <!-- /row -->
   </div>
+</div> <!-- / CONTROLLER ENDS HERE -->
   <div class="statements">
     <ul>
       <li><a href="#monthly-statements">Monthly Statements</a></li>
