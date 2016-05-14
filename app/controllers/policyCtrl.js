@@ -47,6 +47,7 @@ angular
 	});
 })
 
+<<<<<<< HEAD
   $(document).ready(function(){
     $('.summary').matchHeight();
     $('.statements').responsiveTabs({
@@ -68,5 +69,29 @@ angular
       window.location = "login.htm";
     });
   });
+=======
+
+  // $(window).load(function(){
+  //   $('.summary').matchHeight();
+  //   $('.statements').responsiveTabs({
+  //     startCollapsed: 'accordion'
+  //   });
+  //   $.ReStable({
+  //     rowHeaders: false,
+  //     maxWidth: 1024,
+  //     keepHtml: false
+  //   });
+  //   $(".sortable").DataTable({
+  //     "order": [[0, "desc"]]
+  //   });
+  //   if ($('.portal-body').children('.policy-block').length > 1) {
+  //     $(".policy-block").addClass("multiple");
+  //   }
+  //   $("a#logout").on('click', function(){
+  //     alert("You're about to log out!");
+  //     window.location = "login.htm";
+  //   });
+  // });
+>>>>>>> 1076a102f871b07ec6d0523b1bca65669761f486
 
 }])
