@@ -60,11 +60,13 @@
     </div>
     <!-- /row -->
   </div>
-  <div class="statements" responsive-tabs>
+  <div ng-init="show=false" class="statements" responsive-tabs show="show">
     <ul>
       <li><a href="#monthly-statements">Monthly Statements</a></li>
       <li><a href="#day-statements">Day to Day Statements</a></li>
     </ul>
+<!--     <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw" ></i>
+ -->
     <div id="day-statements" ng-controller="dayCtrl">
       <table class="sortable">
         <thead>
@@ -201,7 +203,6 @@
     </div>
 
     <!--- MONTHLY STATEMENT SECTION -->
-
     <div id="monthly-statements" ng-controller="monthCtrl">
       <table class="sortable">
         <thead>
