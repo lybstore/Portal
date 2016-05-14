@@ -10,14 +10,17 @@ app.directive('responsiveTabs', Tabs);
           $('.summary').matchHeight();
           $('.statements').responsiveTabs({
             startCollapsed: 'accordion'
-          });
+          })
+
           $.ReStable({
             rowHeaders: false,
             maxWidth: 1024,
             keepHtml: false
           });
           $(".sortable").DataTable({
-            "order": [[0, "desc"]]
+            "order": [[0, "desc"]],
+            "aLengthMenu": [12, 24, 36],
+            "pageLength": 12
           });
           if ($('.portal-body').children('.policy-block').length > 1) {
             $(".policy-block").addClass("multiple");
