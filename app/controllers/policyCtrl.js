@@ -47,7 +47,6 @@ angular
 	});
 })
 
-<<<<<<< HEAD
   $(document).ready(function(){
     $('.summary').matchHeight();
     $('.statements').responsiveTabs({
@@ -69,7 +68,7 @@ angular
       window.location = "login.htm";
     });
   });
-=======
+
 
   // $(window).load(function(){
   //   $('.summary').matchHeight();
@@ -92,6 +91,5 @@ angular
   //     window.location = "login.htm";
   //   });
   // });
->>>>>>> 1076a102f871b07ec6d0523b1bca65669761f486
 
 }])
