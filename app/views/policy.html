@@ -21,7 +21,7 @@
   </div>
   <div class="row">
     <div class="col-2">
-      <div class="policy-block summary" ng-controller="contractCtrl">
+      <div class="policy-block summary"  ng-controller="contractCtrl">
         <h4>Statement Period Summary</h4>
         <div class="policy" ng-repeat="user in contract | filter:query | limitTo: 1">
           <ul>
@@ -60,7 +60,7 @@
     </div>
     <!-- /row -->
   </div>
-  <div class="statements">
+  <div class="statements" responsive-tabs>
     <ul>
       <li><a href="#monthly-statements">Monthly Statements</a></li>
       <li><a href="#day-statements">Day to Day Statements</a></li>
@@ -69,11 +69,11 @@
       <table class="sortable">
         <thead>
           <tr>
-            <td>Original Balance</td>
-            <td>Effective Date</td>
-            <td>Amount</td>
-            <td>Action</td>
-            <td>New Balance</td>
+            <th>Original Balance</th>
+            <th>Effective Date</th>
+            <th>Amount</th>
+            <th>Action</th>
+            <th>New Balance</th>
           </tr>
         </thead>
         <tbody ng-repeat="user in days | filter:query | limitTo: 1" ng-if="days.length > 0">
