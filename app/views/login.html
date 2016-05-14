@@ -1,5 +1,6 @@
 <div class="login-box">
   <form class="contact-form" ng-submit="signIn()">
+  
     <h1>Log into your Annuity Portal</h1>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mauris lectus, tristique rutrum tellus vitae, gravida aliquet nulla.
@@ -14,6 +15,9 @@
     </div>
     <div>
       <button type="submit">Sign In</button>
+    </div>
+    <div ng-class="text-danger" ng-if="message">
+      {{message}}
     </div>
     <div id="end">
       <i class="fa fa-bolt"></i> Powered by Ai

@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-	.module("auApp", ['ui.router'])
+	.module("auApp", ['ui.router', 'ngStorage'])
 	.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
 	        $urlRouterProvider.otherwise('/');
 
@@ -9,24 +9,49 @@ angular
 	        	.state('login' , {
 	        		url: '/',
 	        		templateUrl: 'app/views/login.html',
-							controller: 'logCtrl'
+							controller: 'logCtrl',
+							authRequired: false
+
 	        	})
 						.state('profile' , {
 							url: '/profile',
-							templateUrl: 'app/views/profile.html'
+							templateUrl: 'app/views/profile.html',
+							authRequired: true
 
 						})
 						.state('settings', {
 							url: '/settings',
-							templateUrl: 'app/views/settings.html'
+							templateUrl: 'app/views/settings.html',
+							authRequired: true
+
 						})
 						.state('policy', {
 							url: '/policy',
 							templateUrl: 'app/views/policy.html',
-							controller: 'policyCtrl'
+							controller: 'policyCtrl',
+							authRequired: true
+
 						})
 						.state('request', {
 							url: '/request',
-							templateUrl: 'app/views/request.html'
+							templateUrl: 'app/views/request.html',
+							authRequired: true
 						});
 	        }])
+	.run(['$location', '$rootScope', '$state', 'auth', function($location, $rootScope, $state,auth){
+
+		 $rootScope.$on('$stateChangeStart', function(e, toState, toParams, fromState, fromParams) {
+
+        if (toState.authRequired && !auth.isLoggedIn()){
+        	e.preventDefault();
+        	$state.go('login');
+        }
+        if (!toState.authRequired && auth.isLoggedIn()){
+        	e.preventDefault();
+        	$state.go('profile');
+        }
+    });
+
+
+
+	}])
