@@ -23,7 +23,7 @@ app.service("loginService", function ($http, $q){
             .then(function(result){
                 $scope.users =  result.data.users;
             }, function(err){
-            
+
             })
     }
 
@@ -34,7 +34,6 @@ app.service("loginService", function ($http, $q){
        var isExist = $scope.users.filter(function(userCredentials){
             return (userCredentials.password == $scope.password && userCredentials.user == $scope.username);
         })
-       console.log(isExist);
        if (isExist.length != 0){
             $localStorage.profile = isExist[0];
             $location.url('/profile');
