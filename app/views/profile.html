@@ -4,14 +4,14 @@
 <!-- CLIENT DETAILS -->
 <div class="portal-body">
   <div ng-controller="userCtrl">
-    <div class="client-details" ng-repeat="user in users | filter:query | limitTo: 1">
+    <div class="client-details">
       <h2>Your Details</h2>
       <p>
         <strong>Name:</strong> {{user.login.name}}
         <br>
         <strong>Address:</strong> {{user.login.address}}
         <br>
-        <strong>Email:</strong> <a href="mailto:lorenwebster@baf.com "> {{user.login.email}}</a>
+        <strong>Email:</strong> <a href="{{user.login.email}}"> {{user.login.email}}</a>
         <br>
         <strong>Telephone:</strong> {{user.login.telephone}}
       </p>
@@ -27,7 +27,7 @@
 </div>
 
 <!-- CONTRACT SERVICES -->
-<div class="portal-container" ng-controller="contractCtrl">
+<div ng-controller="contractCtrl">
     <div class="policy-block">
       <ul class="policy overview" ng-repeat="user in contract | filter:query | limitTo: 1">
         <li>Contact Number: <span>{{user['contract-widget']['contract-number']}}</span></li>
