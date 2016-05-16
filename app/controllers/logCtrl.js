@@ -13,28 +13,36 @@ app.service("loginService", function ($http, $q){
     };
 })
 // load $location
-.controller('logCtrl', ['$scope', 'loginService', '$location', function($scope, loginService, $location) {
+.controller('logCtrl', ['$scope', 'auth', '$location', '$timeout', '$localStorage', function($scope, auth, $location, $timeout, $localStorage) {
+    // assign Auth get user services to $scope.getUser variable
+    $scope.getUser = GetUser;
 
-    var promise = loginService.getuser();
-    promise.then(function (data){
-        $scope.users = data.users;
-    });
+    // Get the user collection from the auth service
+    function GetUser(){
+        auth.getUser()
+            .then(function(result){
+                $scope.users =  result.data.users;
+            }, function(err){
+
+            })
+    }
+
+    $scope.getUser();
 
     // When the Sign in form is submitted (click on button or enter)
     $scope.signIn = function () {
-        if ($scope.username == $scope.users[0].user && $scope.password == $scope.users[0].password) {
-            $location.path('/profile');
-        } else if ($scope.username == $scope.users[1].user && $scope.password == $scope.users[1].password) {
-            $location.path('/profile-02');
-        } else if ($scope.username == $scope.users[2].user && $scope.password == $scope.users[2].password) {
-            $location.path('/profile-03');
-        } else if ($scope.username == $scope.users[3].user && $scope.password == $scope.users[3].password) {
-            $location.path('/profile-04');
-        } else if ($scope.username == $scope.users[4].user && $scope.password == $scope.users[4].password) {
-            $location.path('/profile-05');
-        } else {
-            // $location.path('/login');
-            console.log('wrong password');
-        }
+       var isExist = $scope.users.filter(function(userCredentials){
+            return (userCredentials.password == $scope.password && userCredentials.user == $scope.username);
+        })
+       if (isExist.length != 0){
+            $localStorage.profile = isExist[0];
+            $location.url('/profile');
+       }else{
+        $scope.message = "Wrong credentials";
+        $timeout(function(){
+            $scope.message = null;
+        }, 3000)
+       }
+
     };
 }]);

@@ -4,12 +4,12 @@
     <img src="app/images/logo.png" alt="BAF Financial &amp; Insurance">
     <span>BAF Financial &amp; Insurance</span>
   </a>
-  <div class="header-right" ng-repeat="user in users | filter: query | limitTo: 1">
+  <div class="header-right">
     <div class="date">
       <span ng-bind="convertToDate(myDate) | date: 'mediumDate'" id="dtText"></span>
     </div>
     <div class="profile">
-      <span>Hello, {{user.login.name}}</span>
+      <span>Hello, {{user.user}}</span>
       <div class="profile-pic">
         <i class="fa fa-user"></i>
       </div>
