@@ -1,6 +1,6 @@
-app.directive('transition', transition);
+app.directive('transition', Transition);
 Transition.$inject = ['$timeout']
-function Transition('$timeout') {
+function Transition($timeout) {
   return {
     restrict: 'AE',
     scope: {
@@ -33,6 +33,6 @@ function Transition('$timeout') {
         	}
         });
       })
-    }  
+    }
   }
 }
