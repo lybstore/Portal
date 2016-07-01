@@ -28,7 +28,7 @@ function Transition($timeout) {
         			live: true
         			}
         		);
-        		$('.policy-block').addClass('wow fadeInLeft');
+        		$('.policy-block, .chart-container, .statements').addClass('wow fadeInLeft');
         		new WOW().init();
         	}
         });
